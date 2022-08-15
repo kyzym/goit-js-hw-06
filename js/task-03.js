@@ -13,12 +13,11 @@ const images = [
   },
 ];
 
-const makeImageEl = (array) => {
-  return array
-    .map(({ url, alt }) => {
-      return `<li class="cats-item"><img class="cats-img"  src=${url} alt=${alt}></li>`;
-    })
-    .join("");
+const imageMarkup = ({ url, alt }) => {
+  return `<li class="cats-item"><img class="cats-img"  src=${url} alt=${alt}></li>`;
 };
+
 const galleryEL = document.querySelector(".gallery");
-galleryEL.insertAdjacentHTML("afterbegin", makeImageEl(images));
+
+const makeMarkup = images.map(imageMarkup).join("");
+galleryEL.insertAdjacentHTML("afterbegin", makeMarkup);
