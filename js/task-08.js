@@ -7,12 +7,11 @@ function validation(event) {
     elements: { email, password },
   } = event.currentTarget;
 
-  if (!password.value || !email.value) {
-    alert("Empty field! 😬 Write something");
-  }
-
   const formData = { email: email.value, password: password.value };
 
-  console.log(formData);
+  if (!password.value || !email.value) {
+    alert("Empty field! 😬 Write something");
+  } else console.log(formData);
+
   onForm.reset();
 }
