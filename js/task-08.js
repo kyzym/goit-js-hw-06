@@ -8,8 +8,9 @@ function validation(event) {
   } = event.currentTarget;
 
   const formData = { email: email.value, password: password.value };
+  let enteredPassword = password.value.trim();
 
-  if (!password.value || !email.value) {
+  if (!enteredPassword || !email.value) {
     alert("Empty field! 😬 Write something");
   } else console.log(formData);
 
