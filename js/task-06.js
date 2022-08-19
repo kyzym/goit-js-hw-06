@@ -5,6 +5,7 @@ function validate() {
   value = value.trim();
   if (value.length !== Number(dataset.length)) {
     classList.add("invalid");
+    classList.remove("valid");
   } else {
     classList.remove("invalid");
     classList.add("valid");

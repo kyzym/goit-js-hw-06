@@ -6,13 +6,11 @@ function validation(event) {
   const {
     elements: { email, password },
   } = event.currentTarget;
-
-  const formData = { email: email.value, password: password.value };
   let enteredPassword = password.value.trim();
 
   if (!enteredPassword || !email.value) {
     alert("Empty field! 😬 Write something");
-  } else console.log(formData);
+  } else console.log({ email: email.value, password: password.value });
 
   onForm.reset();
 }
