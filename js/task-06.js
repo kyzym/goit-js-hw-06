@@ -1,7 +1,8 @@
 const input = document.querySelector("#validation-input");
 
 function validate() {
-  const { value, dataset, classList } = input;
+  let { value, dataset, classList } = input;
+  value = value.trim();
   if (value.length !== Number(dataset.length)) {
     classList.add("invalid");
   } else {
